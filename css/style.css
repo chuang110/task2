@@ -1,0 +1,107 @@
+/* 
+六角學院 2022公益程式營
+切版任務二
+程度Lv1
+Discord: Arial#4419
+*/
+
+body {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.btn_price>a {
+    color: #FFFFFF;
+    padding: 8px 23px;
+    background: #FF5D50 0% 0% no-repeat padding-box;
+    border-radius: 22px;
+    opacity: 1;
+    white-space:nowrap;
+}
+
+.info{
+    padding: 10px;
+}
+
+
+
+
+
+
+/* 自適應 */
+/* for 一般電腦裝置(螢幕尺寸>1025px) */
+@media screen and (min-width:1025px){
+    .logo>a>img {
+        width: auto;
+        height: 40px;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar_line{
+        visibility: hidden;
+    }
+    .visualPic {
+        position: relative;
+        text-align: right;
+        z-index: -1;
+        margin-top: -100px;
+    }
+  }
+/* for 平板裝置(768px<螢幕尺寸<1024px) */
+@media screen and (min-width:768px) and (max-width:1024px){
+    .logo>a>img {
+        width: auto;
+        height: 32px;
+    }
+    .navbar {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+    .navbar_line{
+        visibility: visible;
+    }
+    .visualPic {
+        display: none;
+    }
+}
+/* for 手機裝置(螢幕尺寸<768px) */
+@media screen and (max-width:767px){
+    .logo>a>img {
+        width: auto;
+        height: 32px;
+    }
+    .navbar {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+    .navbar_line{
+        visibility: visible;
+    }
+    .visualPic {
+        display: none;
+    }
+    .info > h3 {
+        color: #56C4C5;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
