@@ -7,6 +7,7 @@ Discord: Arial#4419
 
 body {
     margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -24,6 +25,19 @@ li {
     text-align: center;
 }
 
+.navbar {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo>a>img {
+    width: auto;
+    max-height: 40px;
+}
+
 .btn_price>a {
     color: #FFFFFF;
     padding: 8px 23px;
@@ -33,27 +47,51 @@ li {
     white-space:nowrap;
 }
 
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 .info{
     padding: 10px;
+    display: block;
+    text-align: left;    
+}
+
+.info > h3 {
+    color: #56C4C5;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.info > h1{
+    padding-top: 8px;
+    color: #221E1F;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1.3em;
+    white-space:nowrap;
+}
+
+.info > p{
+    padding-top: 16px;
+    color: #221E1F;
+}
+
+.visualPic2{
+    margin-left: -60%;
 }
 
 
 
-
-
-
-/* 自適應 */
+/* RWD */
 /* for 一般電腦裝置(螢幕尺寸>1025px) */
 @media screen and (min-width:1025px){
-    .logo>a>img {
-        width: auto;
-        height: 40px;
-    }
-    .navbar {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+
     .navbar_line{
         visibility: hidden;
     }
@@ -63,45 +101,56 @@ li {
         z-index: -1;
         margin-top: -100px;
     }
+    .banner{
+        flex-direction: row;
+        margin-top: -38%;
+        padding:0 12%;
+    }
+    .BN_Man{
+        width:400px;
+    }
   }
 /* for 平板裝置(768px<螢幕尺寸<1024px) */
 @media screen and (min-width:768px) and (max-width:1024px){
-    .logo>a>img {
-        width: auto;
-        height: 32px;
-    }
-    .navbar {
-        display: flex;
-        justify-content:space-around;
-        align-items: center;
-    }
+
     .navbar_line{
-        visibility: visible;
+        visibility: hidden;
     }
+
     .visualPic {
-        display: none;
+        position: relative;
+        text-align: right;
+        z-index: -1;
+        margin-top: -100px;
+    }
+    .banner{
+        flex-direction: row;
+        margin-top: -36%;
+        padding:0 12%;
+    }
+    .BN_Man{
+        width: 350px;
     }
 }
 /* for 手機裝置(螢幕尺寸<768px) */
 @media screen and (max-width:767px){
-    .logo>a>img {
-        width: auto;
-        height: 32px;
-    }
-    .navbar {
-        display: flex;
-        justify-content:space-around;
-        align-items: center;
-    }
+
     .navbar_line{
         visibility: visible;
     }
     .visualPic {
         display: none;
     }
-    .info > h3 {
-        color: #56C4C5;
-        font-size: 16px;
-        font-weight: 600;
+
+    .banner{
+        flex-direction:column;
     }
+
+    .BN_Man{
+        padding: top 8px;
+        width: 300px;
+        background: url('/images/bg_home_sm.svg') center center no-repeat;
+        background-size:contain;
+    }
+    
 }
