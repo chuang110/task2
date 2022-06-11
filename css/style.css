@@ -35,12 +35,27 @@ h1 {
     white-space: nowrap;
 }
 
+h2 {
+    color: #221E1F;
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+}
+
 h3 {
     padding: 8px 0;
     color: #56C4C5;
     font-size: 1em;
     font-weight: 600;
     line-height: 26px;
+}
+
+h4{
+    padding: 8px 0;
+    color: #221E1F;
+    font-size: 1.1em;
+    font-weight: 800;
 }
 
 p {
@@ -53,6 +68,8 @@ hr {
     color: #FFD153;
     border: #FFD153 solid 1px;
 }
+
+/* ------ */
 
 .container {
     max-width: 900px;
@@ -85,7 +102,7 @@ hr {
 
 
 .banner {
-    padding: 0 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,6 +114,7 @@ hr {
     text-align: left;
 }
 
+/* 背景圖 */
 .bg_home {
     display: block;
     position: relative;
@@ -104,14 +122,50 @@ hr {
     z-index: -1;
 }
 
+.ball01 {
+    display: block;
+    position: relative;
+    text-align: left;
+    z-index: -1;
+}
+
+/* 背景圖END */
+
+.plat {
+    padding: 20px 0;
+    text-align: center;    
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+
+.plat-item{
+    padding:5px;
+    align-items: center;
+}
+
+.plat-item > p{
+    white-space: nowrap;
+}
+
 
 
 /* RWD */
 /* for 一般電腦裝置(螢幕尺寸>1025px) */
 @media screen and (min-width:1025px) {
+
+    /* 背景圖 */
     .bg_home {
         margin-top: -600px;
     }
+
+    .bg_home > img{
+        max-height: 700px;
+    }
+
+    /* 背景圖END */
+
 
     .navbar_line {
         visibility: hidden;
@@ -124,16 +178,32 @@ hr {
     .BN_Man {
         width: 400px;
     }
+
+
+    .plat_logo {
+        width: 90px;
+        height: 90px;
+    }
 }
 
-/* for 平板裝置(768px<螢幕尺寸<1024px) */
-@media screen and (min-width:768px) and (max-width:1024px) {
+/* for 平板裝置(766px<螢幕尺寸<1024px) */
+@media screen and (min-width:766px) and (max-width:1024px) {
+
+    /* 背景圖 */
     .bg_home {
         margin-top: -530px;
     }
+
+    .bg_home > img{
+        max-height: 500px;
+    }
+
+    /* 背景圖END */
+
     .navbar_line {
         visibility: hidden;
     }
+
     .banner {
         flex-direction: row;
     }
@@ -141,16 +211,23 @@ hr {
     .BN_Man {
         width: 350px;
     }
+
+    .plat_logo {
+        width: 90px;
+        height: 90px;
+    }
 }
 
-/* for 手機裝置(螢幕尺寸<768px) */
-@media screen and (max-width:767px) {
+/* for 手機裝置(螢幕尺寸<766px) */
+@media screen and (max-width:765px) {
     .bg_home {
         display: none;
     }
+
     .navbar_line {
         visibility: visible;
     }
+
     .banner {
         flex-direction: column;
     }
@@ -160,6 +237,12 @@ hr {
         width: 300px;
         background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg") center center no-repeat;
         background-size: contain;
+    }
+
+
+    .plat_logo {
+        width: 60px;
+        height: 60px;
     }
 
 }
