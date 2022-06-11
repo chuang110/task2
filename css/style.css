@@ -123,10 +123,10 @@ hr {
 }
 
 .ball01 {
-    display: block;
     position: relative;
     text-align: left;
     z-index: -1;
+    
 }
 
 /* 背景圖END */
@@ -141,7 +141,7 @@ hr {
 
 
 .plat-item{
-    padding:5px;
+    padding: 20px;
     align-items: center;
 }
 
@@ -163,9 +163,13 @@ hr {
     .bg_home > img{
         max-height: 700px;
     }
+    
+    .ball01 {
+        margin-left: -15%;
+        margin-top: -25%;        
+    }
 
     /* 背景圖END */
-
 
     .navbar_line {
         visibility: hidden;
@@ -198,6 +202,11 @@ hr {
         max-height: 500px;
     }
 
+    .ball01 {
+        margin-left: -25%;
+        margin-top: -35%;        
+    }
+
     /* 背景圖END */
 
     .navbar_line {
@@ -220,9 +229,22 @@ hr {
 
 /* for 手機裝置(螢幕尺寸<766px) */
 @media screen and (max-width:765px) {
+    /* 背景圖 */
     .bg_home {
         display: none;
     }
+
+    .ball01 {
+        margin-left:-25%;
+        margin-top: -160%;        
+    }
+
+    .ball01 >img{
+        max-height: 170px;
+    }
+
+
+    /* 背景圖END */
 
     .navbar_line {
         visibility: visible;
