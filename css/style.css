@@ -51,7 +51,7 @@ h3 {
     line-height: 26px;
 }
 
-h4{
+h4 {
     padding: 8px 0;
     color: #221E1F;
     font-size: 1.1em;
@@ -61,6 +61,7 @@ h4{
 p {
     padding: 8px 0;
     color: #221E1F;
+    text-align: center;
 }
 
 hr {
@@ -74,7 +75,7 @@ hr {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    border: 1 solid #221E1F;
+    display: block;
 }
 
 
@@ -126,28 +127,54 @@ hr {
     position: relative;
     text-align: left;
     z-index: -1;
-    
+
+}
+
+.ball01-fix{
+    padding: 40px;
+    margin-top: 450px;
 }
 
 /* 背景圖END */
 
 .plat {
     padding: 20px 0;
-    text-align: center;    
+    text-align: center;
     display: flex;
-    justify-content:center;
-    flex-wrap:wrap;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
-.plat-item{
+.plat-item {
     padding: 20px;
     align-items: center;
 }
 
-.plat-item > p{
+.plat-item>p {
     white-space: nowrap;
 }
+
+.role {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.role-item {
+    width: 270px;
+    margin: 0 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+
+.role-item>img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
 
 
 
@@ -160,13 +187,13 @@ hr {
         margin-top: -600px;
     }
 
-    .bg_home > img{
+    .bg_home>img {
         max-height: 700px;
     }
-    
+
     .ball01 {
         margin-left: -15%;
-        margin-top: -25%;        
+        margin-top: -25%;
     }
 
     /* 背景圖END */
@@ -175,7 +202,8 @@ hr {
         visibility: hidden;
     }
 
-    .banner {
+    .banner,
+    .role {
         flex-direction: row;
     }
 
@@ -198,13 +226,13 @@ hr {
         margin-top: -530px;
     }
 
-    .bg_home > img{
+    .bg_home>img {
         max-height: 500px;
     }
 
     .ball01 {
         margin-left: -25%;
-        margin-top: -35%;        
+        margin-top: -35%;
     }
 
     /* 背景圖END */
@@ -213,7 +241,8 @@ hr {
         visibility: hidden;
     }
 
-    .banner {
+    .banner,
+    .role {
         flex-direction: row;
     }
 
@@ -229,17 +258,18 @@ hr {
 
 /* for 手機裝置(螢幕尺寸<766px) */
 @media screen and (max-width:765px) {
+
     /* 背景圖 */
     .bg_home {
         display: none;
     }
 
     .ball01 {
-        margin-left:-25%;
-        margin-top: -160%;        
+        margin-left: -25%;
+        margin-top: -160%;
     }
 
-    .ball01 >img{
+    .ball01>img {
         max-height: 170px;
     }
 
@@ -250,7 +280,8 @@ hr {
         visibility: visible;
     }
 
-    .banner {
+    .banner,
+    .role {
         flex-direction: column;
     }
 
