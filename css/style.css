@@ -7,7 +7,13 @@ Discord: Arial#4419
 
 body {
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Microsoft JhengHei", Helvetica, sans-serif, Arial;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 a {
@@ -20,16 +26,46 @@ li {
     list-style: none;
 }
 
-
-.header {
-    text-align: center;
+h1 {
+    padding: 8px 0;
+    color: #221E1F;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.3em;
+    white-space: nowrap;
 }
 
+h3 {
+    padding: 8px 0;
+    color: #56C4C5;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+p {
+    padding: 8px 0;
+    color: #221E1F;
+}
+
+hr {
+    width: 100%;
+    color: #FFD153;
+    border: #FFD153 solid 1px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1 solid #221E1F;
+}
+
+
 .navbar {
-    padding: 10px 0;
+    padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -44,113 +80,86 @@ li {
     background: #FF5D50 0% 0% no-repeat padding-box;
     border-radius: 22px;
     opacity: 1;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 
-.banner{
+.banner {
+    padding: 0 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-
-.info{
+.info {
     padding: 10px;
     display: block;
-    text-align: left;    
+    text-align: left;
 }
 
-.info > h3 {
-    color: #56C4C5;
-    font-size: 1em;
-    font-weight: 600;
-    line-height: 26px;
-}
-
-.info > h1{
-    padding-top: 8px;
-    color: #221E1F;
-    font-size: 2em;
-    font-weight: 900;
-    line-height: 1.3em;
-    white-space:nowrap;
-}
-
-.info > p{
-    padding-top: 16px;
-    color: #221E1F;
-}
-
-.visualPic2{
-    margin-left: -60%;
+.bg_home {
+    display: block;
+    position: relative;
+    text-align: right;
+    z-index: -1;
 }
 
 
 
 /* RWD */
 /* for 一般電腦裝置(螢幕尺寸>1025px) */
-@media screen and (min-width:1025px){
+@media screen and (min-width:1025px) {
+    .bg_home {
+        margin-top: -600px;
+    }
 
-    .navbar_line{
+    .navbar_line {
         visibility: hidden;
     }
-    .visualPic {
-        position: relative;
-        text-align: right;
-        z-index: -1;
-        margin-top: -100px;
-    }
-    .banner{
+
+    .banner {
         flex-direction: row;
-        margin-top: -38%;
-        padding:0 12%;
     }
-    .BN_Man{
-        width:400px;
+
+    .BN_Man {
+        width: 400px;
     }
-  }
+}
+
 /* for 平板裝置(768px<螢幕尺寸<1024px) */
-@media screen and (min-width:768px) and (max-width:1024px){
-
-    .navbar_line{
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .bg_home {
+        margin-top: -530px;
+    }
+    .navbar_line {
         visibility: hidden;
     }
-
-    .visualPic {
-        position: relative;
-        text-align: right;
-        z-index: -1;
-        margin-top: -100px;
-    }
-    .banner{
+    .banner {
         flex-direction: row;
-        margin-top: -36%;
-        padding:0 12%;
     }
-    .BN_Man{
+
+    .BN_Man {
         width: 350px;
     }
 }
-/* for 手機裝置(螢幕尺寸<768px) */
-@media screen and (max-width:767px){
 
-    .navbar_line{
-        visibility: visible;
-    }
-    .visualPic {
+/* for 手機裝置(螢幕尺寸<768px) */
+@media screen and (max-width:767px) {
+    .bg_home {
         display: none;
     }
-
-    .banner{
-        flex-direction:column;
+    .navbar_line {
+        visibility: visible;
+    }
+    .banner {
+        flex-direction: column;
     }
 
-    .BN_Man{
+    .BN_Man {
         padding: top 8px;
         width: 300px;
-        background: url('/images/bg_home_sm.svg') center center no-repeat;
-        background-size:contain;
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg") center center no-repeat;
+        background-size: contain;
     }
-    
+
 }
