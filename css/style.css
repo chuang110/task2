@@ -253,17 +253,15 @@ hr {
     color: #F5CA52;
 }
 
-.exp{
+.exp {
     width: 100%;
-    height: 503px;
     text-align: center;
     display: flex;
     flex-direction:column;
     justify-content: center;
-
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg) center center no-repeat;
-    background-size: cover;
+    align-items: center;
 }
+
 
 .btn_price3>a {
     color: #FFFFFF;
@@ -275,7 +273,7 @@ hr {
     white-space: nowrap;
 }
 
-.footer{
+.footer {
     padding: 10px;
     background: #F5F5F5 0% 0% no-repeat padding-box;
     text-align: center;
@@ -323,6 +321,15 @@ hr {
     .brand {
         width: 507px;
     }
+
+    .exp-item{
+        position: absolute;
+    }
+
+    .btn_price3{
+        position: relative;
+    }
+    
 }
 
 /* for 平板裝置(766px<螢幕尺寸<1022px) */
@@ -364,6 +371,14 @@ hr {
 
     .brand {
         width: 500px;
+    }
+
+    .exp-item{
+        position: absolute;
+    }
+
+    .btn_price3{
+        position: relative;
     }
 }
 
